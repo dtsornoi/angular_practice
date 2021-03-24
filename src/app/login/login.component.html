@@ -1,0 +1,66 @@
+<div class="login_screen">
+  <form
+    #loginForm = "ngForm"
+    (ngSubmit)="submit(loginForm)"
+    class="login_form">
+    <h1 class="h1">
+      Login
+    </h1>
+    <div>
+      <input
+        ngModel
+        required
+        #username="ngModel"
+        name="username"
+        type="text"
+        class="username"
+        placeholder="username"
+        id="username">
+      <div
+        *ngIf="username.touched && !username.valid">
+        <div
+          *ngIf="username.errors.required">
+          Username is required.
+        </div>
+      </div>
+    </div>
+    <div>
+      <input
+        ngModel
+        required
+        #password="ngModel"
+        name="password"
+        type="password"
+        class="password"
+        placeholder="password"
+        id="password">
+      <div
+        *ngIf="password.touched && !password.valid">
+        <div
+          *ngIf="password.errors.required">
+          Password is required.
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn"
+      [disabled]="!loginForm.valid">
+      Submit
+    </button>
+    <a
+      class="link"
+      routerLink="subscribe">
+      If not a user Subscribe
+    </a>
+  </form>
+  <div class="nachos">
+    <h1
+      class="h1 nachos_h1">
+      Welcome to Nachos!
+    </h1>
+    <img
+      class="nachos_img"
+      src="assets/images/nachos.svg"
+      alt="nachos">
+  </div>
+</div>

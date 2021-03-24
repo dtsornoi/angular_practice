@@ -1,0 +1,18 @@
+<div
+  class="side_menu transition"
+  [class.shrinking]="!isActive">
+  <app-hamburger
+    (onHamburger)="setIsActiveValue($event)">
+  </app-hamburger>
+  <ul
+    class="nav" >
+    <li
+      class="nav_item"
+      *ngFor="let navItem of navItems">
+      <a
+        [class.show]="!isActive">
+        {{navItem}}
+      </a>
+    </li>
+  </ul>
+</div>

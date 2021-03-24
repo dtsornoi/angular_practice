@@ -1,0 +1,15 @@
+.posts{
+  display: flex;
+  flex-direction: column;
+}
+
+.posts_form{
+  margin: 0 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_btn{
+  align-self: start;
+  width: 5rem;
+}

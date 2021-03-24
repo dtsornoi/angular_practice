@@ -1,0 +1,27 @@
+<div class="posts">
+  <div *ngFor="let post of posts">
+    <h1>{{post.heading}}</h1>
+    <p>{{post.message}}</p>
+  </div>
+  <div
+    class="posts_form">
+    <h1 class="h1">
+      Write your own Post!
+    </h1>
+    <input
+      ngModel
+      #heading="ngModel"
+      type="text"
+      placeholder="Heading">
+    <textarea
+      ngModel
+      #message="ngModel"
+      placeholder="Message"
+      name="postBody"
+      id="postBody"
+      cols="30"
+      rows="10">
+    </textarea>
+    <input type="submit" class="btn input_btn" (click)="save(heading.value, message.value)">
+  </div>
+</div>

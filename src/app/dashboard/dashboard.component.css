@@ -1,0 +1,42 @@
+.main_content{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.dashboard{
+  flex: 5;
+  margin: 3rem 5rem;
+}
+
+.profile{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.nacho_profile_img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.nacho_profile_info{
+  margin-left: 2rem;
+}
+
+.username{
+  font-size: 3rem;
+  text-align: center;
+}
+
+p{
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 0.8rem;
+}
+
+app-sidemenu{
+  flex: 1;
+}

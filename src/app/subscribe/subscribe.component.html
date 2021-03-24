@@ -1,0 +1,75 @@
+<div class="container">
+  <div
+    class="subscribe_content">
+    <h1 class="h1">
+      Register to get our Nachos!
+    </h1>
+    <form
+      #subscribeForm = "ngForm"
+      (ngSubmit)="submit(subscribeForm)"
+      class="subscribe_form">
+      <div>
+        <input
+          ngModel
+          required
+          #username="ngModel"
+          name="username"
+          type="text"
+          class="username"
+          placeholder="Username">
+        <div
+          *ngIf="username.touched && !username.valid">
+          <div
+            *ngIf="username.errors.required">
+            Username is required.
+          </div>
+        </div>
+      </div>
+      <div>
+        <input
+          ngModel
+          required
+          #password="ngModel"
+          name="password"
+          type="text"
+          class="password"
+          placeholder="Password">
+        <div
+          *ngIf="password.touched && !password.valid">
+          <div
+            *ngIf="password.errors.required">
+            Password is required.
+          </div>
+        </div>
+      </div>
+      <div>
+        <input
+          ngModel
+          required
+          #email="ngModel"
+          name="email"
+          type="text"
+          class="email"
+          placeholder="Email">
+        <div
+          *ngIf="email.touched && !email.valid">
+          <div
+            *ngIf="email.errors.required">
+            Email is required.
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn"
+        [disabled]="!subscribeForm.valid"
+      >
+        Register
+      </button>
+    </form>
+    <a
+      class="link"
+      routerLink="/">
+        Return
+    </a>
+  </div>
+</div>

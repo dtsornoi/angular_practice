@@ -1,0 +1,14 @@
+.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background: black;
+  margin: 6px;
+ position: relative;
+}
