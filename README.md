@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Project Short Description
-**THIS IS NOT A MEAN Project.**
+**THIS IS NOT A MEAN Project.**  
 Aim of this project was to practice Angular fundamentals. Components, Routing, Data managment.(No Http handling in this project).  
 Created Simple login screen (usename: admin password: admin / hardcoded).  
 Cretaed Subscribe screen, which won't create a new user, becouse of the Persistence layer absence.  
