@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
+
+
+interface Post {
+  id: number;
+  heading: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-post',
@@ -10,9 +16,11 @@ import {NgForm} from '@angular/forms';
   ]
 })
 export class PostComponent implements OnInit {
-  posts;
+  posts: { heading: string; id: number; message: string }[];
+  index: number = 0;
   constructor() {
     this.posts = [{
+      id: this.index,
       heading: 'My first Post',
       message: 'This is my first Post'
     }];
@@ -23,9 +31,16 @@ export class PostComponent implements OnInit {
 
 
   save(heading, message) {
+    this.index++;
     this.posts.push({
+      id: this.index,
       heading: heading,
       message: message
     });
+  }
+
+  delete(id) {
+    this.posts.splice(id, 1);
+    this.index--;
   }
 }

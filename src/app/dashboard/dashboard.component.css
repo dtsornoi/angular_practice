@@ -8,6 +8,8 @@
 .dashboard{
   flex: 5;
   margin: 3rem 5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .profile{

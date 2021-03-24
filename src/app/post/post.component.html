@@ -1,7 +1,10 @@
 <div class="posts">
   <div *ngFor="let post of posts">
+
     <h1>{{post.heading}}</h1>
     <p>{{post.message}}</p>
+    <button class="btn" (click)="delete(post.id)">Delete</button>
+    <hr>
   </div>
   <div
     class="posts_form">
