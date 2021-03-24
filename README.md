@@ -29,6 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Project Short Description
 #THIS IS NOT A MEAN Project.
 Aim of this project was to practice Angular fundamentals. Components, Routing, Data managment.(No Http handling in this project).
-Created Simple login screen (usename: admin password: admin / hardcoded). \n
+Created Simple login screen (usename: admin password: admin / hardcoded). /n
 Cretaed Subscribe screen, which won't create a new user, becouse of the Persistence layer absence.
 Created a simple Dashboard and Side-menu.
