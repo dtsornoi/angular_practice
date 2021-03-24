@@ -31,4 +31,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Aim of this project was to practice Angular fundamentals. Components, Routing, Data managment.(No Http handling in this project).  
 Created Simple login screen (usename: admin password: admin / hardcoded).  
 Cretaed Subscribe screen, which won't create a new user, becouse of the Persistence layer absence.  
-Created a simple Dashboard and Side-menu.
+Created a simple Dashboard and Side-menu.  
+**Did not do UNIT test, on the moment of current task creation, did not study how to do UNIT tests in Angular**
