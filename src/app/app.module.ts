@@ -11,6 +11,7 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { PostComponent } from './post/post.component';
 import { HamburgerComponent } from './hamburger/hamburger.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     SidemenuComponent,
     PostComponent,
-    HamburgerComponent
+    HamburgerComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

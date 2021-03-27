@@ -1,11 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
-
-interface Post {
-  id: number;
-  heading: string;
-  message: string;
-}
+import {Component, Input, OnInit} from '@angular/core';
+import {v4 as uuid} from 'uuid';
+import {Post} from '../model/post';
 
 @Component({
   selector: 'app-post',
@@ -16,31 +11,37 @@ interface Post {
   ]
 })
 export class PostComponent implements OnInit {
-  posts: { heading: string; id: number; message: string }[];
-  index: number = 0;
+  posts: Post[];
+  postHeading: string;
+  postMessage: string;
   constructor() {
-    this.posts = [{
-      id: this.index,
-      heading: 'My first Post',
-      message: 'This is my first Post'
-    }];
+    this.posts = [
+      new Post(uuid(), 'My first Post', 'This is my first Post')];
   }
 
   ngOnInit(): void {
   }
 
 
-  save(heading, message) {
-    this.index++;
-    this.posts.push({
-      id: this.index,
-      heading: heading,
-      message: message
-    });
+  save() {
+    this.posts.push(new Post(uuid(), this.postHeading, this.postMessage));
   }
 
   delete(id) {
-    this.posts.splice(id, 1);
-    this.index--;
+    this.posts = this.posts.filter((post: Post) => post.id !== id);
+  }
+
+  update(post: Post) {
+
+    this.posts.map((item: Post) => {
+      if (post.id === item.id){
+        post.isActive = !post.isActive;
+        let newPost = new Post(post.id, post.heading, post.message);
+        item = newPost;
+        return;
+      }
+    })
+
+
   }
 }

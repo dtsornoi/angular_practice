@@ -1,0 +1,23 @@
+<div>
+  <div
+    class="posts_form">
+    <h1 class="h1">
+      Update your post
+    </h1>
+    <input
+      [(ngModel)]="post.heading"
+      type="text">
+    <textarea
+      [(ngModel)]="post.message"
+      (keyup.enter)="updatedPost.emit(post)"
+      name="postBody"
+      id="postBody"
+      cols="30"
+      rows="10">
+    </textarea>
+    <input
+      type="submit"
+      class="btn input_btn"
+      (click)="updatedPost.emit(post)">
+  </div>
+</div>

@@ -59,3 +59,14 @@ app-root{
   margin: 0;
   padding: 0;
 }
+
+.posts_form{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.input_btn{
+  align-self: start;
+  width: 5rem;
+}
